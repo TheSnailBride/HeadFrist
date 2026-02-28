@@ -1,13 +1,11 @@
-
-
+import java.util.Stack;
 
 public class Main {
     public static void main(String[] args) {
 
-        int n =5 ;
-        Integer i = new Integer(5);
-        Integer i2 = new Integer(5);
 
-        System.out.println( i2.equals(i) );
+//        MyNote myNote = new MyNote(); //생성 불가능
+
+        MyNote.test();
         }
     }

@@ -13,7 +13,11 @@ public class ChocteBoiler {
 
     public static synchronized ChocteBoiler getInstance(){
         if(uniqehocteBoiler ==null){
-            uniqehocteBoiler = new ChocteBoiler();
+            synchronized (ChocteBoiler.class){
+                if(uniqehocteBoiler == null){
+                    uniqehocteBoiler = new ChocteBoiler();
+                }
+            }
         }
         return uniqehocteBoiler;
 
