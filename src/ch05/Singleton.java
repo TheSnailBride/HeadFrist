@@ -4,7 +4,10 @@ public class Singleton {
 
     public static Singleton uniqueSingleton =new Singleton();
 
+    int num =11;
+
     private Singleton(){
+        num=20;
         System.out.println("싱글톤 새로운 객체 생성");
     }
 //    public static SingleTon getInstance(){ // 객체가 두 개 생성 될 수 있음
@@ -23,6 +26,14 @@ public class Singleton {
 
     public static Singleton getInstance(){
         return uniqueSingleton;
+    }
+
+    public static void test(){
+        System.out.println("여긴 메소드라서 실행 된다");
+    }
+    public void test1(){
+        System.out.println("여긴 static 이 아니라서 실행 안됨");
+        System.out.println(num);
     }
 
 
